@@ -1,157 +1,15 @@
 {
   "tasks": [
     {
-      "id": "4",
-      "title": "ppp",
-      "description": "ppp",
-      "catagory": "Release",
-      "status": "Pending",
-      "assignee": "ppp"
-    },
-    {
       "id": "10",
       "title": "IMP",
       "description": "IMP",
       "catagory": "Develop",
       "status": "Todo",
       "assignee": "NBN"
-    },
-    {
-      "id": "15",
-      "title": "jas",
-      "description": "JAS",
-      "catagory": "Release",
-      "status": "Pending",
-      "assignee": "ram"
-    },
-    {
-      "id": "99",
-      "title": "java scrip",
-      "description": "java",
-      "catagory": "Testing",
-      "status": "Pending",
-      "assignee": "kumar"
-    },
-    {
-      "id": "63",
-      "title": "project",
-      "description": "project",
-      "catagory": "Develop",
-      "status": "Inprogress",
-      "assignee": "ramya"
-    },
-    {
-      "id": "25",
-      "title": "test",
-      "description": "test",
-      "catagory": "Develop",
-      "status": "Pending",
-      "assignee": "siva"
-    },
-    {
-      "id": "23",
-      "title": "test",
-      "description": "test",
-      "catagory": "Testing",
-      "status": "Inprogress",
-      "assignee": "nave"
-    },
-    {
-      "id": "",
-      "title": "q",
-      "description": "q",
-      "catagory": "Develop",
-      "status": "Todo",
-      "assignee": "a"
-    },
-    {
-      "id": "f3990f9d-ee9f-4572-b7e3-089bfa41d9aa",
-      "title": "test",
-      "description": "test2",
-      "catagory": "Release",
-      "status": "Pending",
-      "assignee": "naveen"
     }
   ],
   "users": [
-    {
-      "name": "John Doe",
-      "email": "john2@gmail.com",
-      "password": "12345"
-    },
-    {
-      "name": "Jane Smith",
-      "email": "jane3@gmail.com",
-      "password": "123456"
-    },
-    {
-      "name": "Alice Johnson",
-      "email": "alice4@gmail.com",
-      "password": "1234567"
-    },
-    {
-      "name": "Bob Brown",
-      "email": "bob5@gmail.com",
-      "password": "12345678"
-    },
-    {
-      "name": "Charlie Davis",
-      "email": "charlie6@gmail.com",
-      "password": "123456789"
-    },
-    {
-      "id": "9043",
-      "name": "naveen",
-      "email": "nav@gamil.com",
-      "password": "141414"
-    },
-    {
-      "id": "f738",
-      "name": "a",
-      "email": "a@c.v",
-      "password": "a"
-    },
-    {
-      "id": "7ca8",
-      "name": "nav",
-      "email": "nav@gmail.com",
-      "password": "121212"
-    },
-    {
-      "id": "719f",
-      "name": "abc",
-      "email": "a@c.a",
-      "password": "12345"
-    },
-    {
-      "id": "15bb",
-      "name": "a",
-      "email": "s@x.m",
-      "password": "12"
-    },
-    {
-      "id": "62ca",
-      "name": "x",
-      "email": "a@a.a",
-      "password": "123"
-    },
-    {
-      "id": "40d1",
-      "name": "naveen5",
-      "email": "naveen2@gmail.com",
-      "password": "1233456"
-    },
-    {
-      "id": "8c87",
-      "email": "naveen2@gmail.com",
-      "password": "1233456"
-    },
-    {
-      "id": "6e38",
-      "name": "v",
-      "email": "v@v.v",
-      "password": "1"
-    },
     {
       "id": "d8ff",
       "name": "b",
