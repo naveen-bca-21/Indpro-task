@@ -53,7 +53,7 @@
       "title": "test",
       "description": "test",
       "catagory": "Develop",
-      "status": "",
+      "status": "Pending",
       "assignee": "siva"
     },
     {
@@ -61,7 +61,7 @@
       "title": "test",
       "description": "test",
       "catagory": "Testing",
-      "status": "",
+      "status": "Inprogress",
       "assignee": "nave"
     },
     {
@@ -79,6 +79,69 @@
       "catagory": "",
       "status": "",
       "assignee": ""
+    }
+  ],
+  "people": [
+    {
+      "name": "John Doe",
+      "email": "john2@gmail.com",
+      "password": "12345"
+    },
+    {
+      "name": "Jane Smith",
+      "email": "jane3@gmail.com",
+      "password": "123456"
+    },
+    {
+      "name": "Alice Johnson",
+      "email": "alice4@gmail.com",
+      "password": "1234567"
+    },
+    {
+      "name": "Bob Brown",
+      "email": "bob5@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "name": "Charlie Davis",
+      "email": "charlie6@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": "9043",
+      "name": "naveen",
+      "email": "nav@gamil.com",
+      "password": "141414"
+    },
+    {
+      "id": "f738",
+      "name": "a",
+      "email": "a@c.v",
+      "password": "a"
+    },
+    {
+      "id": "7ca8",
+      "name": "nav",
+      "email": "nav@gmail.com",
+      "password": "121212"
+    },
+    {
+      "id": "719f",
+      "name": "abc",
+      "email": "a@c.a",
+      "password": "12345"
+    },
+    {
+      "id": "15bb",
+      "name": "a",
+      "email": "s@x.m",
+      "password": "12"
+    },
+    {
+      "id": "62ca",
+      "name": "x",
+      "email": "a@a.a",
+      "password": "123"
     }
   ]
 }
