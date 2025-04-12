@@ -7,12 +7,19 @@ import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function Read() {
+  const navigate = useNavigate(); 
+    useEffect(() => {
+      if (!sessionStorage.getItem("authToken")) {
+        navigate("/login", { replace: true }); 
+      }
+    }, [navigate]);
+
   const [data, setData] = useState([])
   const {id} = useParams();
   
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/users/${id}`)
+    axios.get(`http://localhost:3000/tasks/${id}`)
       .then((res) => {
         console.log(res.data)
         setData(res.data)

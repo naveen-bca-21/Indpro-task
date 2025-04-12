@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+  const navigate = useNavigate(); 
+  useEffect(() => {
+    if (!sessionStorage.getItem("authToken")) {
+      navigate("/login", { replace: true }); 
+    }
+  }, [navigate]);
+
   const [data, setData] = useState([]);
   const [searchQuery, setSearchQuery] = useState(''); // State for search query
   const [categoryFilter, setCategoryFilter] = useState(''); // State for category filter
@@ -11,7 +19,7 @@ function Home() {
   const [statusOptions, setStatusOptions] = useState(['All', 'Completed', 'Pending', 'Todo', 'Inprogress']); // Example status options
 
   useEffect(() => {
-    axios.get('http://localhost:3000/users')
+    axios.get('http://localhost:3000/tasks')
       .then((res) => {
         setData(res.data);
       })
@@ -23,7 +31,7 @@ function Home() {
   const handleDelete = (id) => {
     const confirmDelete = window.confirm("Are you sure you want to delete this task?");
     if (confirmDelete) {
-      axios.delete(`http://localhost:3000/users/${id}`)
+      axios.delete(`http://localhost:3000/tasks/${id}`)
         .then(() => {
           setData(data.filter((item) => item.id !== id));
         })
@@ -32,6 +40,12 @@ function Home() {
         });
     }
   };
+
+  const handleLogout = () => {
+    sessionStorage.removeItem("authToken"); // Remove the token from session storage  
+    navigate("/login", { replace: true }); // Redirect to login page
+  };
+  
 
   // Filter data based on search query, category filter, and status filter
   const filteredData = data.filter((item) => {
@@ -116,6 +130,7 @@ function Home() {
               </tr>
             ))}
           </tbody>
+          <button onClick={handleLogout} className='d-flex justify-content-end'>Logout</button>
         </table>
       </div>
     </div>

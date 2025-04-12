@@ -1,13 +1,5 @@
 {
-  "users": [
-    {
-      "id": "4",
-      "title": "ppp",
-      "description": "ppp",
-      "catagory": "Release",
-      "status": "Pending",
-      "assignee": "ppp"
-    },
+  "tasks": [
     {
       "id": "10",
       "title": "IMP",
@@ -15,70 +7,20 @@
       "catagory": "Develop",
       "status": "Todo",
       "assignee": "NBN"
+    }
+  ],
+  "users": [
+    {
+      "id": "d8ff",
+      "name": "b",
+      "email": "b@b.b",
+      "password": "123"
     },
     {
-      "id": "1",
-      "title": "create module 22",
-      "description": "prepare the module",
-      "catagory": "Develop",
-      "status": "Inprogress",
-      "assignee": "naveen"
-    },
-    {
-      "id": "15",
-      "title": "jas",
-      "description": "JAS",
-      "catagory": "Release",
-      "status": "Pending",
-      "assignee": "ram"
-    },
-    {
-      "id": "99",
-      "title": "java scrip",
-      "description": "java",
-      "catagory": "Testing",
-      "status": "Pending",
-      "assignee": "kumar"
-    },
-    {
-      "id": "63",
-      "title": "project",
-      "description": "project",
-      "catagory": "Develop",
-      "status": "Inprogress",
-      "assignee": "ramya"
-    },
-    {
-      "id": "25",
-      "title": "test",
-      "description": "test",
-      "catagory": "Develop",
-      "status": "",
-      "assignee": "siva"
-    },
-    {
-      "id": "23",
-      "title": "test",
-      "description": "test",
-      "catagory": "Testing",
-      "status": "",
-      "assignee": "nave"
-    },
-    {
-      "id": "",
-      "title": "q",
-      "description": "q",
-      "catagory": "Develop",
-      "status": "Todo",
-      "assignee": "a"
-    },
-    {
-      "id": "afae27cc-2584-4563-860f-ef5320141429",
-      "title": "mm",
-      "description": "",
-      "catagory": "",
-      "status": "",
-      "assignee": ""
+      "id": "0f91",
+      "name": "test",
+      "email": "t@t.t",
+      "password": "1"
     }
   ]
 }

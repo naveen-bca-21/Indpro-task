@@ -2,8 +2,16 @@ import axios from "axios";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
+import { useEffect } from "react";
 
 function Create() {
+    const navigate = useNavigate(); 
+    useEffect(() => {
+      if (!sessionStorage.getItem("authToken")) {
+        navigate("/login", { replace: true }); 
+      }
+    }, [navigate]);
+
   const categoriesData = [
     { label: "1 ", value: "Develop" },
     { label: "2 ", value: "Test" },
@@ -27,11 +35,9 @@ function Create() {
     assignee: "",
   });
 
-  const navigate = useNavigate();
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post("http://localhost:3000/users", values).then((res) => {
+    axios.post("http://localhost:3000/tasks", values).then((res) => {
       console.log(res.data);
       alert("Task Added Successfully");
       navigate("/");

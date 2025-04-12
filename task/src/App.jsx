@@ -17,6 +17,8 @@ function App() {
       <Route path='/create' element={<Create/>}></Route>
       <Route path='/update/:id' element={<Update/>}></Route>
       <Route path='/read/:id' element={<Read/>}></Route>
+      <Route path='/login' element={<Login/>}></Route>
+      <Route path='/signup' element={<Signup/>}></Route>
       
     </Routes>
     </BrowserRouter>
