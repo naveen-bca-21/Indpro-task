@@ -1,5 +1,5 @@
 {
-  "users": [
+  "tasks": [
     {
       "id": "4",
       "title": "ppp",
@@ -73,15 +73,15 @@
       "assignee": "a"
     },
     {
-      "id": "afae27cc-2584-4563-860f-ef5320141429",
-      "title": "mm",
-      "description": "",
-      "catagory": "",
-      "status": "",
-      "assignee": ""
+      "id": "f3990f9d-ee9f-4572-b7e3-089bfa41d9aa",
+      "title": "test",
+      "description": "test2",
+      "catagory": "Release",
+      "status": "Pending",
+      "assignee": "naveen"
     }
   ],
-  "people": [
+  "users": [
     {
       "name": "John Doe",
       "email": "john2@gmail.com",
@@ -142,6 +142,12 @@
       "name": "x",
       "email": "a@a.a",
       "password": "123"
+    },
+    {
+      "id": "40d1",
+      "name": "naveen5",
+      "email": "naveen2@gmail.com",
+      "password": "1233456"
     }
   ]
 }

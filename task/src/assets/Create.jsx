@@ -31,7 +31,7 @@ function Create() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post("http://localhost:3000/users", values).then((res) => {
+    axios.post("http://localhost:3000/tasks", values).then((res) => {
       console.log(res.data);
       alert("Task Added Successfully");
       navigate("/");

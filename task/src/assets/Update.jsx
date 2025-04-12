@@ -36,7 +36,7 @@ function Update() {
   const navigate = useNavigate();
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/users/${id}`)
+      .get(`http://localhost:3000/tasks/${id}`)
       .then((res) => {
         console.log(res.data);
        setValues(res.data);
@@ -49,7 +49,7 @@ function Update() {
   const handleUpdate = (event) => {
     event.preventDefault();
     axios
-      .put(`http://localhost:3000/users/${id}`, values)
+      .put(`http://localhost:3000/tasks/${id}`, values)
       .then((res) => {
         console.log(res.data);
         navigate("/");

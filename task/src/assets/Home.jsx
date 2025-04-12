@@ -11,7 +11,7 @@ function Home() {
   const [statusOptions, setStatusOptions] = useState(['All', 'Completed', 'Pending', 'Todo', 'Inprogress']); // Example status options
 
   useEffect(() => {
-    axios.get('http://localhost:3000/users')
+    axios.get('http://localhost:3000/tasks')
       .then((res) => {
         setData(res.data);
       })
@@ -23,7 +23,7 @@ function Home() {
   const handleDelete = (id) => {
     const confirmDelete = window.confirm("Are you sure you want to delete this task?");
     if (confirmDelete) {
-      axios.delete(`http://localhost:3000/users/${id}`)
+      axios.delete(`http://localhost:3000/tasks/${id}`)
         .then(() => {
           setData(data.filter((item) => item.id !== id));
         })

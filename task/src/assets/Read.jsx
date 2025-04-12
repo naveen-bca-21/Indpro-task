@@ -12,7 +12,7 @@ function Read() {
   
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/users/${id}`)
+    axios.get(`http://localhost:3000/tasks/${id}`)
       .then((res) => {
         console.log(res.data)
         setData(res.data)
