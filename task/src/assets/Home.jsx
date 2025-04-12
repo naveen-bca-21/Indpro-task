@@ -41,6 +41,12 @@ function Home() {
     }
   };
 
+  const handleLogout = () => {
+    sessionStorage.removeItem("authToken"); // Remove the token from session storage  
+    navigate("/login", { replace: true }); // Redirect to login page
+  };
+  
+
   // Filter data based on search query, category filter, and status filter
   const filteredData = data.filter((item) => {
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -124,6 +130,7 @@ function Home() {
               </tr>
             ))}
           </tbody>
+          <button onClick={handleLogout} className='d-flex justify-content-end'>Logout</button>
         </table>
       </div>
     </div>
