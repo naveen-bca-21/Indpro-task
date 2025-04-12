@@ -32,9 +32,8 @@ const Login = () => {
       );
 
       if (user) {
-        alert('Login successful!');
-        
-        localStorage.setItem('token', 'dummy-token'); // Save a dummy token for authentication
+        let token = Math.random().toString(36).substring(2, 15); // Generate a  token
+        sessionStorage.setItem('authToken', token); 
         navigate('/'); // Redirect to home or dashboard
       } else {
         alert('Invalid email or password');

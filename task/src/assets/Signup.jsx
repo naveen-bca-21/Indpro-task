@@ -21,7 +21,9 @@ const Signup = () => {
 
       if (response.ok) {
         console.log(data);
-        navigate('/login'); // Redirect to login page
+        let token = Math.random().toString(36).substring(2, 15); // Generate a  token
+        sessionStorage.setItem('authToken', token);
+        navigate('/'); // Redirect to login page
       } else {
         console.log(data);
       }

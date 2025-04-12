@@ -17,14 +17,6 @@
       "assignee": "NBN"
     },
     {
-      "id": "1",
-      "title": "create module 22",
-      "description": "prepare the module",
-      "catagory": "Develop",
-      "status": "Inprogress",
-      "assignee": "naveen"
-    },
-    {
       "id": "15",
       "title": "jas",
       "description": "JAS",
@@ -153,6 +145,18 @@
       "id": "8c87",
       "email": "naveen2@gmail.com",
       "password": "1233456"
+    },
+    {
+      "id": "6e38",
+      "name": "v",
+      "email": "v@v.v",
+      "password": "1"
+    },
+    {
+      "id": "d8ff",
+      "name": "b",
+      "email": "b@b.b",
+      "password": "123"
     }
   ]
 }

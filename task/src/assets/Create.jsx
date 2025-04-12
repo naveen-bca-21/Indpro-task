@@ -4,6 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
 
 function Create() {
+  const navigate = useNavigate(); 
+    useEffect(() => {
+      if (!sessionStorage.getItem("authToken")) {
+        navigate("/login", { replace: true }); 
+      }
+    }, [navigate]);
+
   const categoriesData = [
     { label: "1 ", value: "Develop" },
     { label: "2 ", value: "Test" },
@@ -26,8 +33,6 @@ function Create() {
     status: "Todo",
     assignee: "",
   });
-
-  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();

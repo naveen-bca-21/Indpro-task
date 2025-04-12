@@ -7,6 +7,13 @@ import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function Read() {
+  const navigate = useNavigate(); 
+    useEffect(() => {
+      if (!sessionStorage.getItem("authToken")) {
+        navigate("/login", { replace: true }); 
+      }
+    }, [navigate]);
+
   const [data, setData] = useState([])
   const {id} = useParams();
   
