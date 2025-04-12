@@ -1,29 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [users, setUsers] = useState([]);
   const navigate = useNavigate();
+
+  // Fetch users when the component mounts
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const response = await axios.get('http://localhost:3000/users');
+        setUsers(response.data);
+      } catch (error) {
+        console.error('Error fetching users:', error);
+      }
+    };
+
+    fetchUsers();
+  }, []); // Empty dependency array ensures this runs only once when the component mounts
 
   const handleLogin = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3000/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
-      });
+      // Check if the user exists in the fetched users list
+      const user = users.find(
+        (user) => user.email === email && user.password === password
+      );
 
-      const data = await response.json();
-
-      if (response.ok) {
-        alert(data.message);
-        localStorage.setItem('token', data.token); // Save token for authentication
+      if (user) {
+        alert('Login successful!');
+        
+        localStorage.setItem('token', 'dummy-token'); // Save a dummy token for authentication
         navigate('/'); // Redirect to home or dashboard
       } else {
-        alert(data.message);
+        alert('Invalid email or password');
       }
     } catch (error) {
       console.error('Error during login:', error);
@@ -44,6 +58,7 @@ const Login = () => {
               className="form-control rounded-0"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              autoComplete="email"
               required
             />
           </div>
@@ -55,6 +70,7 @@ const Login = () => {
               className="form-control rounded-0"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              autoComplete="current-password"
               required
             />
           </div>
