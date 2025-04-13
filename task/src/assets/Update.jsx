@@ -54,6 +54,10 @@ function Update() {
 
   const handleUpdate = (event) => {
     event.preventDefault();
+    if (!values.title || !values.description || !values.assignee) {
+      alert("Please fill in all fields");
+      return;
+    }
     axios
       .put(`http://localhost:3000/tasks/${id}`, values)
       .then((res) => {

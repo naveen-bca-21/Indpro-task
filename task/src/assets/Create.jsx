@@ -37,6 +37,11 @@ function Create() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (!values.title || !values.description || !values.assignee) {
+      alert("Please fill in all fields");
+      return;
+    }
+
     axios.post("http://localhost:3000/tasks", values).then((res) => {
       console.log(res.data);
       alert("Task Added Successfully");
