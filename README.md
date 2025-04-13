@@ -1,6 +1,6 @@
-# 📝 Task Manager App (Monorepo)
+Task Management App (Monorepo)
 
-A full-stack Task Manager Application built with **React** (frontend) and **Node.js/Express** (backend), featuring secure user authentication, task CRUD operations, filtering, tagging, due dates, and priority management. This monorepo contains both the frontend and backend codebases.
+A full-stack Task Manager Application built with **React** (frontend) and **Node.js/Express** (backend), featuring secure user authentication, task CRUD operations, filtering, and priority management. This monorepo contains both the frontend and backend codebases.
 
 ## Features
 
@@ -36,8 +36,12 @@ This Module Can Create Users Details and Login purpose.
 
 Authentication used with home page,create, update. if the user can signup and login, the token will provide in the session stroage, and authorised.
 
-### 2. Task list table with filters 
+### 3. Task list table with filters 
 
-This Module Can Filter 
+This Module Can Filter, Search of the data. and also have editing options here
 
+
+### 4. Create, Edit and Delete
+
+This modlue has separte pages to create, edit and delete. The Delete Button has a confirmation type module.
 
